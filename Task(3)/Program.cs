@@ -16,8 +16,9 @@ namespace Task_3_
             //var selectedNegNum = from n in sequence where Math.Sign(n).Equals(-1) select n;
             //Console.WriteLine(selectedPosNum.First() + " " + selectedNegNum.Last());
 
-            Console.WriteLine(sequence.FirstOrDefault(n => Math.Sign(n).Equals(1)) + " " + sequence.LastOrDefault(n => Math.Sign(n).Equals(-1)));
+            //Console.WriteLine(sequence.FirstOrDefault(n => Math.Sign(n).Equals(1)) + " " + sequence.LastOrDefault(n => Math.Sign(n).Equals(-1)));
 
+            Console.WriteLine(sequence.FirstOrDefault(n => n > 0) + " " + sequence.LastOrDefault(n => n < 0));
             Console.ReadKey();
         }
     }
