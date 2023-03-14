@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Text.Json;
+using System.IO;
 namespace Task_2_
 {
     class Program
@@ -24,6 +25,9 @@ namespace Task_2_
             {
                 Console.WriteLine(result.ElementAt(i).Value + " " + result.ElementAt(i).Key);
             }
+            string json = JsonSerializer.Serialize<IOrderedEnumerable<KeyValuePair<double,string>>>(result);
+            File.WriteAllText("json.json",json);
+
             Console.ReadKey();
         }
     }
